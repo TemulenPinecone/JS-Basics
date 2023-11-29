@@ -111,4 +111,7 @@ console.log("That month is : ", result);
 
 
 
-
+// logic operator
+// &&	and 
+// ||	or
+// !	not
