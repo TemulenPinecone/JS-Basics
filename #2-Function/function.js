@@ -115,3 +115,194 @@ console.log("That month is : ", result);
 // &&	and 
 // ||	or
 // !	not
+
+Non-primitive  
+
+ 
+
+Let person = { 
+FirstName : 'John', 
+LastName : 'Doe', 
+Age : 12, 
+Email : , 
+Adress : }; 
+ 
+Console.log(person); 
+Console.log(person.firstName); 
+
+ 
+
+Let person = { 
+FirstName : 'John', 
+LastName : 'Doe', 
+Age : 12, 
+Email : , 
+Adress :  
+Object: { 
+  // variable дотор дахиад variable зарлаж болно. 
+District : , 
+ }, 
+}; 
+ 
+Console.log(person); 
+Console.log(person.firstName); 
+
+// array
+
+let array = [ 'car', 'apple', 'pen', 'bowl' ] ; 
+// дотор нь 4 зүйл байгаа бол 0,1,2,3 гэж тоолно
+console.log(array[0]); // 'car' 
+console.log(array[1]); // 'apple'
+
+let array = [ 'car', 'apple', 'pen', 'bowl' , ['orange']] ; 
+console.log(array[4][0], array[0]); 
+
+
+// city gedeg array zarla
+// city ni dotroo 8 hotiin ner aguulna
+// hot bolgoniig console.log ashiglaad hewlej haruulna.
+
+// USA object uusge
+// State-uudeer ni variable
+// state bolgonii population number
+
+let city = ['Stockolm', 'Sydney', 'Tokyo', 'Seoul', 'Vienna', 'Jerusalem', 'Rome', 'London'];
+console.log(city[0], city[1],city[2],city[3],city[4],city[5],city[6],city[7]);
+
+let USA = {
+Alabama: {
+ Capital : 'Montgomery', Population : 200603},
+Alaska : {
+  Capital : 'Juneau', Population : 32255}, 
+Florida : {
+  Capital : 'Tallahassee', Population : 196068},
+NewYork : {
+  Capital : 'Albany', Population : 99224},
+Alabama1: {
+ Capital : 'Montgomery', Population : 200603},
+Alaska1 : {
+  Capital : 'Juneau', Population : 32255}, 
+Florida1 : {
+  Capital : 'Tallahassee', Population : 196068},
+NewYork1 : {
+  Capital : 'Albany', Population : 99224}
+};
+
+console.log(USA);
+
+
+// Object : {
+//   city[0], USA.California;
+// }
+
+
+// let USA1 = {
+//   state: city[0],
+//   population: {
+//     all: 398080,
+//     malePopulation: 18600,
+//     femalePopulation: 110000
+//   }
+// }
+
+// console.log(USA1);
+
+
+
+
+// salary ni 2 sayaas ih
+// N.Daatgal toldog baih
+// passport eswel identity cardtai baih
+// person baih eswel itgemjleleer baih
+// dept ni 1 sayas baga bwal zeel garna
+
+
+let loan = { 
+name : 'John', 
+salary : 3000000, 
+socialInsurance : true,
+passport : true,
+identityCard : false,
+dept : 700000,
+credentials: true,
+own : false
+ };
+ 
+ if (loan.salary > 2000000 && 
+  loan.socialInsurance > 0 && 
+  (loan.passport || loan.identityCard) && 
+  loan.dept < 1000000 && 
+  (loan.credentials || loan.own))
+  
+  {console.log("Dear "+loan.name +" : Loan is possible");
+} else console.log("Loan is not possible");
+
+// if ( 1 && 1 &&  0 || 1 && 1)
+// if ( 1 * 1 * ( 0 + 1 ) * 1)
+
+// 80-d huwaagddag toonii niilber
+
+function add(a,b,c,d) {
+  let result = 0; 
+  if ( a>80) {result=result+a;}
+  if ( b>80) {result=result+b;}
+  if ( c>80) {result=result+c;}
+  if ( d>80) {result=result+d;}
+  return result;
+}
+
+let lastResult = add(46,900,764,4);
+console.log(lastResult);
+
+// 5-d huwaagddag toonuudiin urjwer
+
+function multiply(a,b,c,d) {
+  let result = 1;
+  if (a%5==0) {result=result*a}
+  if (b%5==0) {result=result*b}
+  if (c%5==0) {result=result*c}
+  if (d%5==0) {result=result*d}
+  return result;
+}
+
+// 5-d huwaagddaggui toonuudiin urjwer
+if (a%5!=0)
+
+let lastResult = multiply(15,2,10,4);
+console.log(lastResult);
+
+// 80-s ih ba tegsh, or 3-t huwaagddag toonuudiin niilber
+
+function sum(a,b,c) {
+  let result = 0;
+  if (a>80 && a%2==0 || a%3==0) {result=result+a}
+  if (b>80 && b%2==0 || b%3==0) {result=result+b}
+  if (c>80 && c%2==0 || c%3==0) {result=result+c}
+  return result;
+}
+
+let lastResult = sum(91,6,120);
+console.log(lastResult);
+
+// if it's raining today, take umbrella
+// if it's snowing today, take umbrella
+// if it's sunny today, take umbrella 
+
+let todayForecast = {
+  raining : true,
+  sunny : false,
+}
+
+
+
+if( todayForecast.raining && todayForecast.sunny) {
+  console.log("Take Umbrella");
+} else if(todayForecast.raining){
+
+}
+else if( todayForecast.sunny){
+
+}
+else {
+  
+}
