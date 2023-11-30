@@ -167,7 +167,8 @@ console.log(array[4][0], array[0]);
 // state bolgonii population number
 
 let city = ['Stockolm', 'Sydney', 'Tokyo', 'Seoul', 'Vienna', 'Jerusalem', 'Rome', 'London'];
-console.log(city[0], city[1],city[2],city[3],city[4],city[5],city[6],city[7]);
+// console.log(city[0], city[1],city[2],city[3],city[4],city[5],city[6],city[7]);
+console.log(city[0]);
 
 let USA = {
 Alabama: {
@@ -228,12 +229,7 @@ credentials: true,
 own : false
  };
  
- if (loan.salary > 2000000 && 
-  loan.socialInsurance > 0 && 
-  (loan.passport || loan.identityCard) && 
-  loan.dept < 1000000 && 
-  (loan.credentials || loan.own))
-  
+ if (loan.salary > 2000000 && loan.socialInsurance > 0 && (loan.passport || loan.identityCard) && loan.dept < 1000000 && (loan.credentials || loan.own))
   {console.log("Dear "+loan.name +" : Loan is possible");
 } else console.log("Loan is not possible");
 
@@ -242,16 +238,16 @@ own : false
 
 // 80-d huwaagddag toonii niilber
 
-function add(a,b,c,d) {
+function sum(a,b,c,d) {
   let result = 0; 
-  if ( a>80) {result=result+a;}
-  if ( b>80) {result=result+b;}
-  if ( c>80) {result=result+c;}
-  if ( d>80) {result=result+d;}
+  if (a>80) {result=result+a;}
+  if (b>80) {result=result+b;}
+  if (c>80) {result=result+c;}
+  if (d>80) {result=result+d;}
   return result;
 }
 
-let lastResult = add(46,900,764,4);
+let lastResult = sum(46,900,764,4);
 console.log(lastResult);
 
 // 5-d huwaagddag toonuudiin urjwer

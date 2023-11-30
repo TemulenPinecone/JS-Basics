@@ -3,13 +3,13 @@
 function sec(x) {
   return x % 60;
 }
-function min(x) {
+fnunctio min(x) {
   return (x % 3600) / 60 - (((x % 3600) / 60) % 1);
 }
 // let minute = (x % 3600) / 60 - (((x % 3600) / 60) % 1);
 
 function hour(x) {
-  return (x - (x % (60 * 60))) / (60 * 60);
+  return (x - (x % 3600)) / (3600);
   // return parseInt(x / 3600);
 }
 
