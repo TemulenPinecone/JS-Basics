@@ -3,7 +3,7 @@
 function sec(x) {
   return x % 60;
 }
-fnunctio min(x) {
+function min(x) {
   return (x % 3600) / 60 - (((x % 3600) / 60) % 1);
 }
 // let minute = (x % 3600) / 60 - (((x % 3600) / 60) % 1);
