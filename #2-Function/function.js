@@ -304,5 +304,4 @@ else if( todayForecast.sunny){
 
 }
 else {
-  
 }
