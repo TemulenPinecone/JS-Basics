@@ -1,11 +1,10 @@
 let name = "Tem";
 let myAge = 23;
 
-// "let" - program-н комманд - declare a variable
-// "=" - assign a value - "Assignment mean суулгаж өгөх"
-
 console.log(name);
 console.log(myAge);
+// "let" - program-н комманд - declare a variable
+// "=" - assign a value - "Assignment mean суулгаж өгөх"
 
 // "console.log(...); - Output дээр үр дүнг хэвлэх комманд"
 // " -> quotation mark
