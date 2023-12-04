@@ -80,13 +80,24 @@ let products = [
 ];
 
 for (let i = 0; i < products.length; i = i + 1) {
-  let changedPrices = products[i].price * 0.9;
-  console.log(changedPrices);
+  products[i].price = products[i].price * 0.9;
+  console.log(products[i]);
 }
 
-for (let i = 0; i < products.length; i = i + 1) {
-  if (products[i].brand == "HP") {
-    let selectedBrand = products[i];
-    console.log(selectedBrand);
-  }
-}
+// for (let i = 0; i < products.length; i = i + 1) {
+//   let changedPrices = products[i].price * 0.9;
+//   console.log(changedPrices);
+// }
+
+// for (let i = 0; i < products.length; i = i + 1) {
+//   if (products[i].brand == "HP") {
+//     console.log(products[i]);
+//   }
+// }
+
+// for (let i = 0; i < products.length; i = i + 1) {
+//   if (products[i].brand == "HP") {
+//     let selectedBrand = products[i];
+//     console.log(selectedBrand);
+//   }
+// }
