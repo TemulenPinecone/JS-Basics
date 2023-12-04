@@ -209,33 +209,6 @@ console.log(USA);
 // console.log(USA1);
 
 
-
-
-// salary ni 2 sayaas ih
-// N.Daatgal toldog baih
-// passport eswel identity cardtai baih
-// person baih eswel itgemjleleer baih
-// dept ni 1 sayas baga bwal zeel garna
-
-
-let loan = { 
-name : 'John', 
-salary : 3000000, 
-socialInsurance : true,
-passport : true,
-identityCard : false,
-dept : 700000,
-credentials: true,
-own : false
- };
- 
- if (loan.salary > 2000000 && loan.socialInsurance > 0 && (loan.passport || loan.identityCard) && loan.dept < 1000000 && (loan.credentials || loan.own))
-  {console.log("Dear "+loan.name +" : Loan is possible");
-} else console.log("Loan is not possible");
-
-// if ( 1 && 1 &&  0 || 1 && 1)
-// if ( 1 * 1 * ( 0 + 1 ) * 1)
-
 // 80-d huwaagddag toonii niilber
 
 function sum(a,b,c,d) {
@@ -280,24 +253,42 @@ function sum(a,b,c) {
 let lastResult = sum(91,6,120);
 console.log(lastResult);
 
-// if it's raining today, take umbrella
-// if it's snowing today, take umbrella
-// if it's sunny today, take umbrella 
 
-let todayForecast = {
-  raining : true,
-  sunny : false,
+
+
+
+let display = [
+  {
+    brand : "LG",
+    inch : "23",
+    price : 200000,
+    year : "2022",
+  },
+  {
+    brand : "sony",
+    inch : "31",
+    price : 400000,
+    year : "2021",
+  },
+];
+
+let iphonePrices = [900,850,800,790];
+
+console.log(display[0].brand);
+
+display[0,1].price = display[0,1].price * 0.9;
+console.log(display[0].price, display[1].price);
+
+
+// LOOP
+// for(initialize; condition, update) {body}
+
+for (let i = 0; i < 10; i = i + 1) {
+  console.log(i);
 }
 
+// loop // 1 - initialize 
+        // 2 - condition 
+        // 3 - body -> consloge.log
+        // 4 - update
 
-
-if( todayForecast.raining && todayForecast.sunny) {
-  console.log("Take Umbrella");
-} else if(todayForecast.raining){
-
-}
-else if( todayForecast.sunny){
-
-}
-else {
-}
