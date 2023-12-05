@@ -5,8 +5,8 @@ if (input > 10) {
   console.log("Yes");
 } else console.log("No");
 
-let input = 11;
-if (input > 10) {
+let input2 = 11;
+if (input2 > 10) {
   console.log("Yes");
 } else console.log("No");
 

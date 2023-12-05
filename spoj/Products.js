@@ -79,21 +79,46 @@ let products = [
   },
 ];
 
-for (let i = 0; i < products.length; i = i + 1) {
-  products[i].price = products[i].price * 0.9;
-  console.log(products[i]);
+function findByExpensive() {
+  let expensive = products[0].price;
+  for (let i = 1; i < 10; i++) {
+    if (expensive < products[i].price) {
+      expensive = products[i].price;
+    }
+  }
+  console.log(expensive);
 }
+findByExpensive();
+
+// DISCOUNT
+
+// function setSale(x) {
+//   for (let i = 0; i < products.length; i = i + 1) {
+//     products[i].price = products[i].price * (1 - x / 100);
+//     console.log(products[i].price);
+//   }
+// }
+// setSale(10);
 
 // for (let i = 0; i < products.length; i = i + 1) {
 //   let changedPrices = products[i].price * 0.9;
 //   console.log(changedPrices);
 // }
 
-// for (let i = 0; i < products.length; i = i + 1) {
-//   if (products[i].brand == "HP") {
-//     console.log(products[i]);
-//   }
-// }
+// FILTER
+function findByBrand(find) {
+  for (let i = 0; i < products.length; i = i + 1) {
+    if (products[i].brand == find) {
+      console.log(products[i]);
+    }
+  }
+}
+findByBrand("HP");
+
+// Бүх бүтээгдэхүүн зөв эсэх?
+for (let i = 0; i < 10; i = i + 1) {
+  console.log(i, "=>", products[i]);
+}
 
 // for (let i = 0; i < products.length; i = i + 1) {
 //   if (products[i].brand == "HP") {
@@ -101,3 +126,5 @@ for (let i = 0; i < products.length; i = i + 1) {
 //     console.log(selectedBrand);
 //   }
 // }
+
+
