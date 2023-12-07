@@ -1,5 +1,5 @@
 function triangle(a, b, c) {
-  if (a + b >= c && b + c >= a && c + a >= b) {
+  if (a + b > c && b + c > a && c + a > b) {
     console.log("Yes");
   } else {
     console.log("No");

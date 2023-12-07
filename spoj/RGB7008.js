@@ -4,3 +4,4 @@ function lastNum10(x) {
 
 let result = lastNum10(489);
 console.log(result);
+

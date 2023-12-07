@@ -23,11 +23,12 @@ function floorDoorNum(floor, door, number) {
 
 
 floorDoorNum(5, 4, 4);
-// floorDoorNum(5, 4, 8);
-// floorDoorNum(5, 4, 3);
-// floorDoorNum(5, 4, 12);
-// floorDoorNum(5, 4, 20);
+floorDoorNum(5, 4, 8);
+floorDoorNum(5, 4, 3);
+floorDoorNum(5, 4, 12);
 floorDoorNum(5, 4, 20);
+floorDoorNum(5, 4, 20);
+
 
 
 // floorDoorNum(10, 7, 7);
