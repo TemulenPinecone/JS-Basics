@@ -77,8 +77,16 @@ let news = [
     // author : "Johnnie"; 
     // category : "Politics";
 
-function filterByDate() {
-
+function sort(news) {
+    let temp, sorted;
+    for (let i=0; i<news.length; i++) {
+        if (news[i].publitionDate > news[i+1].publitionDate) {
+            temp = news[i];
+            news[i].publitionDate = news[i+1].publitionDate;
+            news[i+1].publitionDate = temp;
+            sorted=true;
+        }
+    }
 }
 
 // console.log(Date());

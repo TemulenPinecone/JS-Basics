@@ -6,6 +6,8 @@
 // get Electrons - utga awaad butsaana
 // set Dicscount -
 
+// FIND EXPENSIVE PRODUCTS
+
 let products = [
   {
     name: "iphone14",
@@ -91,14 +93,13 @@ function findByExpensive() {
 findByExpensive();
 
 // DISCOUNT
-
-// function setSale(x) {
-//   for (let i = 0; i < products.length; i = i + 1) {
-//     products[i].price = products[i].price * (1 - x / 100);
-//     console.log(products[i].price);
-//   }
-// }
-// setSale(10);
+function setSale(x) {
+  for (let i = 0; i < products.length; i = i + 1) {
+    products[i].price = products[i].price * (1 - x / 100);
+    console.log(products[i].price);
+  }
+}
+setSale(10);
 
 // for (let i = 0; i < products.length; i = i + 1) {
 //   let changedPrices = products[i].price * 0.9;
@@ -205,9 +206,8 @@ let products = [
 function findAboveAvg(prods) {
   let avgPrice = 0;
   let sumPrice = 0;
-  for (let i=0; i<prods.length; i++) {
+  for (let i = 0; i < prods.length; i++) {
     sumPrice = sumPrice + prods[i].price;
   }
-  console.log("sumPrice :",)
+  console.log("sumPrice :");
 }
-
