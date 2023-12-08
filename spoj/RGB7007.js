@@ -4,3 +4,4 @@ function lastNum(x) {
 
 let result = lastNum(475);
 console.log("Result : ", result);
+
