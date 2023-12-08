@@ -7,9 +7,8 @@ function quadraticUntilN(x) {
       resultSum = resultSum + result;
     }
   }
-  console.log(resultSum);
+  // console.log(resultSum);
+  return resultSum;
 }
 
-quadraticUntilN(5);
-
-
+console.log(quadraticUntilN(5));

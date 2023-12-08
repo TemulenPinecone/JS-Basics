@@ -8,12 +8,18 @@ function firstDecimal(x) {
   return a;
 }
 
+console.log(1034);
+console.log(1034%10);
+console.log((1034-1034%10));
+console.log((1034-1034%10)/10);
+
 console.log(firstDecimal(1034));
 
 counta(x, a){
 
 }
 
+// 2тоо өгөдөнө. Эхний тоон дотор 2 дахь тоо хэдэн ш байгааг хэвлэ. 
 // counta(1235511, 1) 
 // return 2;
 
@@ -22,4 +28,6 @@ counta(x, a){
 
 let a = "2341";
 console.log(a[0]);
+
+
 

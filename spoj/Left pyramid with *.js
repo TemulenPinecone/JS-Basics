@@ -5,5 +5,6 @@ function pyramid(x) {
     printStar += "*";
     console.log(printStar);
   }
+  return printStar;
 }
 pyramid(8);
