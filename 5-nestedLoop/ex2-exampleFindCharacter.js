@@ -20,24 +20,15 @@ let sentence2 = `Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicin
 adfadf`;
 let word = [];
 let count = 0;
-for (let i = 0; i < sentence.length; i++) {
-  if (sentence[i] == ` `) {
-    word[count] = sentence[i];
+let str = ``;
+for (let i = 0; i < sentence2.length; i++) {
+  if (sentence2[i] == ` `) {
+    word[count] = str;
+    str = ``;
     count++;
-  }
+  } else str = str + sentence2[i];
 }
-
-// s="bat dorj"
-// if(s[i]=="") {
-// array[count] = str;
-// str="";
-// count++;
-// }
-// else {
-//   str=str+s[i];
-// }
-
-console.log(`Word `, word);
+console.log(`Word : `, word);
 
 // 1,1-r ni haij ywj baigaad zai garch irwel umnuh index-uudaa hamgiin ehnii index deer nemeed
 // hoyr dahi index-s zai baigaa index-g hurtel utgiig ni hooson bolgono.
