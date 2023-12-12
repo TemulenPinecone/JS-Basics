@@ -29,6 +29,17 @@ for (let i = 0; i < sentence.length; i++) {
     }
   }
 
+// s="bat dorj"
+// if(s[i]=="") {
+// array[count] = str;
+// str="";
+// count++; 
+// }
+// else {
+//   str=str+s[i];
+// }
+
+
 console.log(`Word `, word);
 
 
