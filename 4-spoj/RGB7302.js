@@ -11,4 +11,4 @@ function nSum(x) {
   return sum;
   //   console.log(sum);
 }
-console.log(nSum(234));
+console.log(nSum(234234));
