@@ -76,14 +76,14 @@ let filterBrand = products.filter((a) => {
 });
 console.log(`filter : `, filterBrand);
 
-// for loop and if
-// let filterBrands = [];
-// let count = 0;
-// for (let a = 0; a < products.length; a++) {
-//   if (products[a].brand == "HP") {
-//     filterBrands[count] = products[a];
-//     count++;
-//   }
-// }
+for loop and if
+let filterBrands = [];
+let count = 0;
+for (let a = 0; a < products.length; a++) {
+  if (products[a].brand == "HP") {
+    filterBrands[count] = products[a];
+    count++;
+  }
+}
 
-// console.log(`HP`, filterBrands);
+console.log(`HP`, filterBrands);

@@ -71,10 +71,6 @@ let products = [
   },
 ];
 
-
-
-
-
 products.sort((a, b) => {
   if (a.stock < b.stock) {
     return -1;
