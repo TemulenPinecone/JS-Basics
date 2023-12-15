@@ -77,7 +77,7 @@ function Discount10Average(dat, compareAverage) {
   dat.map((a) => (sumPrice = sumPrice + a.price * 0.9));
   priceAverage = sumPrice / dat.length;
   //   console.log(`first sumPrice`, sumPrice);
-  //   console.log(`priceAverage`, priceAverage);
+  // console.log(`priceAverage`, priceAverage);
   let result = dat.filter(
     (b) => b.price <= priceAverage,
     dat.map((c) => {

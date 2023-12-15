@@ -151,7 +151,93 @@ const bookData = [
 
 // console.log(expensiveMoreThan(17));
 
-bookData.filter((b) => {
-  return b.price < 12;
-});
-console.log ();
+// #1 : find Expensive book more than 12
+
+// function findExpensiveBook(inputPrice) {
+//   let filterExpensiveBook = bookData.filter((a) => a.price > inputPrice);
+//   return filterExpensiveBook;
+// }
+
+// console.log(findExpensiveBook(20));
+
+// #2 : find 12-18 priced range books
+
+// function findPricedBook(inputLowPrice, inputHighPrice) {
+//   let filterPricedBook = bookData.filter(
+//     (a) => a.price > inputLowPrice && a.price < inputHighPrice
+//   );
+//   return filterPricedBook;
+// }
+
+// console.log(findPricedBook(12, 18));
+
+// #3 : sort books by rating
+
+// function sortByRate(inputData) {
+//   inputData.sort((a, b) => {
+//     if (a.rating < b.rating) {
+//       return -1;
+//     } else {
+//       return 1;
+//     }
+//   }
+//   );
+//   return inputData;
+// }
+
+// console.log(sortByRate(bookData));
+
+// function sortByRate(inputData) {
+//   inputData.sort((a, b) => a.rating - b.rating);
+//   return inputData;
+// }
+// console.log(sortByRate(bookData));
+
+// #4 : find more than 20 length books
+
+// function findTextLengthMoreThan(inputLength) {
+//   let filteredTextLegth = bookData.filter((a) => a.title.length > inputLength);
+//   return filteredTextLegth;
+// }
+
+// console.log(findTextLengthMoreThan(20));
+
+// #5 - add summary on object by like this `A captivating book by ${book.author}.`
+
+function addKeyOnObject(inputData) {
+  let summaryAdded = inputData.map((a) => {
+    a.summary = a.title + ` by ` + a.author;
+    return a;
+  });
+  return summaryAdded;
+}
+
+console.log(addKeyOnObject(bookData));
+
+// #6 - Book title iin character length ni 10 aas ihiin awdag function bich, tedgeeriin price 
+//      range iig ni oor function oor garga
+
+function findTextLength(10) {
+  let filteredTextLegth = bookData
+  .filter((a) => a.title.length > 10,
+  .)
+}
+
+function topPerformersReport(dat, perf) {
+  let topPerformers = dat
+    .filter((a) => a.performanceRating >= perf)
+    .map(({ name, performanceRating }) => ({ name, performanceRating }));
+  return topPerformers;
+}
+
+console.log(topPerformersReport(employees, 4.8));
+
+
+// function findPricedBook(inputLowPrice, inputHighPrice) {
+//   let filterPricedBook = bookData.filter(
+//     (a) => a.price > inputLowPrice && a.price < inputHighPrice
+//   );
+//   return filterPricedBook;
+// }
+
+// console.log(findPricedBook(12, 18));
