@@ -214,30 +214,26 @@ function addKeyOnObject(inputData) {
 
 console.log(addKeyOnObject(bookData));
 
-// #6 - Book title iin character length ni 10 aas ihiin awdag function bich, tedgeeriin price 
+// #6 - Book title iin character length ni 10 aas ihiin awdag function bich, tedgeeriin price
 //      range iig ni oor function oor garga
 
-function findTextLength(10) {
-  let filteredTextLegth = bookData
-  .filter((a) => a.title.length > 10,
-  .)
-}
-
-function topPerformersReport(dat, perf) {
-  let topPerformers = dat
-    .filter((a) => a.performanceRating >= perf)
-    .map(({ name, performanceRating }) => ({ name, performanceRating }));
-  return topPerformers;
-}
-
-console.log(topPerformersReport(employees, 4.8));
-
-
-// function findPricedBook(inputLowPrice, inputHighPrice) {
-//   let filterPricedBook = bookData.filter(
-//     (a) => a.price > inputLowPrice && a.price < inputHighPrice
+// function findTextLengthPriceRange(charLength, lowPrice, highPrice) {
+//   let filteredTextLegth = bookData.filter(
+//     (a) =>
+//       a.title.length > charLength && a.price > lowPrice && a.price < highPrice
 //   );
-//   return filterPricedBook;
+//   return filteredTextLegth;
 // }
 
-// console.log(findPricedBook(12, 18));
+// console.log(findTextLengthPriceRange(10, 12, 18));
+
+// #7 - 12 oos ih vnetei nomnuudaas rating ni 4.7 oos deesh rating tei nomnuudiig oldog function bich
+
+// function inequalityPriceAndRate(inputPrice, inputRate) {
+//   let filteredPriceAndRate = bookData.filter(
+//     (a) => a.price > inputPrice && a.rating > inputRate
+//   );
+//   return filteredPriceAndRate;
+// }
+
+// console.log(inequalityPriceAndRate(12, 4.7));
