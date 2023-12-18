@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid black;
+  height: 100px;
+  padding: 10px 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(133, 89, 8);
+  color: white;
+}
+
+button {
+  padding: 0 15px;
+}
+
+.bottomContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}

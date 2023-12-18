@@ -36,9 +36,9 @@ function frequentItemInArray(inputArray) {
 let max = 1;
 let result = 0, temp; 
 for (let i = 0; i < inputArray.length; i++) {
-  console.log(`i loop : `, i, `temp : `, temp);
+  // console.log(`i loop : `, i, `temp : `, temp);
   for (let j=1; j<inputArray.length; j++) {
-    console.log(`     j loop :`, j );
+    // console.log(`     j loop :`, j );
   if (inputArray[i] === inputArray[j]) {
     max++;
     temp=+inputArray[i]; console.log(`                          1st if : ` + temp + `   ( ` + max +` times )`);
