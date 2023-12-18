@@ -217,6 +217,25 @@ console.log(addKeyOnObject(bookData));
 // #6 - Book title iin character length ni 10 aas ihiin awdag function bich, tedgeeriin price
 //      range iig ni oor function oor garga
 
+function findTextLength(10) {
+  let filteredTextLegth = bookData
+  .filter((a) => a.title.length > 10 && a.price
+  .filter)
+}
+
+function topPerformersReport(dat, perf) {
+  let topPerformers = dat
+    .filter((a) => a.performanceRating >= perf)
+    .map(({ name, performanceRating }) => ({ name, performanceRating }));
+  return topPerformers;
+}
+
+console.log(topPerformersReport(employees, 4.8));
+
+
+// function findPricedBook(inputLowPrice, inputHighPrice) {
+//   let filterPricedBook = bookData.filter(
+//     (a) => a.price > inputLowPrice && a.price < inputHighPrice
 // function findTextLengthPriceRange(charLength, lowPrice, highPrice) {
 //   let filteredTextLegth = bookData.filter(
 //     (a) =>

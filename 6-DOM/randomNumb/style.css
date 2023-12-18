@@ -1,0 +1,4 @@
+.randomNumbBtn input:focus {
+  outline: none;
+  border: none;
+}
