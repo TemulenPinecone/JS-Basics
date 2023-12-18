@@ -13,7 +13,8 @@ function checkNumb() {
 }
 
 function resetRandom() {
-  let randomNumb = Math.floor(Math.random() * 10 + 1);
+  // randomNumb;
+  randomNumb = Math.floor(Math.random() * 10 + 1);
   document.getElementById(`num1`).value = ``;
   document.getElementById(`result`).innerText = ``;
 }
