@@ -6,4 +6,6 @@ let intro = `My name is ${name} and my age is ${age}`;
 
 // root.appendChild()
 
-1  sh product CSS
+root.innerHTML = root.innerHTML `<img src=${products[0].image}`
+
+
