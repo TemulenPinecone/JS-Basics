@@ -3,7 +3,8 @@ const products = [
     name: "Laptop",
     price: 999.99,
     brand: "ExampleBrand",
-    image_url: "https://via.placeholder.com/300",
+    image_url:
+      "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/a236b20e-Panel16_DeviceFamily_14?fmt=png-alpha&scl=1",
     description:
       "Powerful laptop with high-performance specs for work and entertainment.",
   },
@@ -156,9 +157,38 @@ const products = [
   },
 ];
 
-function createCard(product) {
-  const cardDiv = 
+function createCard(x) {
+  const cardDiv = document.createElement(`div`);
+  const cardImg = document.createElement(`img`);
+  const cardName = document.createElement(`p`);
+  const cardPrice = document.createElement(`p`);
+  const cardDesc = document.createElement(`p`);
+
+  cardDiv.setAttribute(`class`, `card`);
+  cardImg.setAttribute(`class`, `card_img`);
+  cardName.setAttribute(`class`, `card_name`);
+  cardPrice.setAttribute(`class`, `card_price`);
+  cardDesc.setAttribute(`class`, `card_desc`);
+
+  cardImg.setAttribute(`src`, x.image_url);
+
+  cardName.innerText = x.name;
+  cardPrice.innerText = x.price;
+  cardDesc.innerText = x.description;
+
+  cardDiv.appendChild(cardImg);
+  cardDiv.appendChild(cardName);
+  cardDiv.appendChild(cardPrice);
+  cardDiv.appendChild(cardDesc);
+
+  return cardDiv;
 }
+
+const root = document.getElementById(`root`);
+
+products.map((a) => {
+  root.appendChild(createCard(a));
+});
 
 // function createCard(product) {
 //   const cardDiv = document.createElement("div");
