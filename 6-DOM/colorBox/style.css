@@ -1,6 +1,8 @@
 #root {
   display: flex;
-  border: solid 0.1px grey;
+  align-items: center;
+  flex-direction: column;
+  /* border: solid 0.1px grey; */
 }
 
 .header {
@@ -12,5 +14,18 @@
 .box {
   width: 100px;
   height: 100px;
-  border: solid 0.1px grey;
+  /* border: solid 0.1px grey; */
+  border-radius: 5px;
+  cursor: pointer;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+count = point
+
