@@ -29,6 +29,8 @@ const container = document.createElement(`div`);
 container.setAttribute(`class`, `container`);
 root.appendChild(container);
 
+// EASY BUTTON -> FUNCTION
+
 startEasyButton.addEventListener("click", () => {
   startGame(8);
 });
@@ -38,6 +40,8 @@ startMediumButton.addEventListener("click", () => {
 startHardButton.addEventListener("click", () => {
   startGame(24);
 });
+
+// START GAME FUNCTION
 
 function startGame(x) {
   const contWidthCalc = Math.sqrt(x + 1) * 100 + 100;
@@ -78,7 +82,6 @@ function startGame(x) {
     // box.addEventListener(`click`, (e) => {
     //   console.log(e.target);
     // });
-
     box.addEventListener(`click`, () => {});
   }
 }

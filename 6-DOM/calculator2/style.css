@@ -1,0 +1,32 @@
+.inputLine {
+  width: 350px;
+  height: 50px;
+  padding-bottom: 10px;
+  border: 0.1px solid grey;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.buttonContainer {
+  width: 390px;
+}
+
+.calcButtonFirstLine,
+.calcButtonSecondLine,
+.calcButtonThirdLine,
+.calcButtonFourthLine,
+.calcButtonFifthLine {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  column-gap: 5px;
+  padding-bottom: 5px;
+}
+
+button {
+  width: 90px;
+  height: 60px;
+}
