@@ -1,30 +1,36 @@
 const root = document.getElementById("root");
 
-const startButton3 = document.createElement("button");
-startButton3.innerText = "Start : 3 x 3";
-root.appendChild(startButton3);
+const header = document.createElement(`div`);
+header.setAttribute(`class`, `header`);
+root.appendChild(header);
 
-// const startButton4 = document.createElement("button");
-// startButton4.innerText = "Start : 4 x 4";
-// root.appendChild(startButton4);
+const startEasyButton = document.createElement("button");
+startEasyButton.setAttribute(`class`, `button`);
+startEasyButton.innerText = "Easy : 3 x 3";
+header.appendChild(startEasyButton);
 
-// const startButton5 = document.createElement("button");
-// startButton5.innerText = "Start : 5 x 5";
-// root.appendChild(startButton5);
+const startMediumbutton = document.createElement("button");
+startMediumbutton.setAttribute(`class`, `button`);
+startMediumbutton.innerText = "Medium : 4 x 4";
+header.appendChild(startMediumbutton);
 
-startButton3.addEventListener("click", startGame);
+const startHardButton = document.createElement("button");
+startHardButton.setAttribute(`class`, `button`);
+startHardButton.innerText = "Hard : 5 x 5";
+header.appendChild(startHardButton);
 
-function startGame() {
-  const container3 = document.createElement(`div`);
-  container3.setAttribute(`id`, `container3Id`);
-  container3.setAttribute(`class`, `box3`);
-  container3.appendChild(root);
+startEasyButton.addEventListener("click", startGameEasy);
+
+function startGameEasy() {
+  const containerEasy = document.createElement(`div`);
+  containerEasy.setAttribute(`class`, `containerEasy`);
+  containerEasy.appendChild(root);
 
   for (let i = 0; i < 8; i++) {
     const box = document.createElement("div");
     box.setAttribute("class", "box");
+    containerEasy.appendChild(box);
     //   box.style.backgroundColor = randomColor;
-    container3.appendChild(box);
   }
 
   //   const diffBox = document.createElement("div");

@@ -1,18 +1,16 @@
-.box {
-  width: 100px;
-  height: 100px;
-  border: solid 0.1px grey;
-}
-
 #root {
   display: flex;
   border: solid 0.1px grey;
 }
 
-button {
-  margin: auto;
+.header {
+  display: flex;
+  margin: 0 auto;
+  gap: 15px;
 }
 
-.box3 {
-  border: solid 1px grey;
+.box {
+  width: 100px;
+  height: 100px;
+  border: solid 0.1px grey;
 }
