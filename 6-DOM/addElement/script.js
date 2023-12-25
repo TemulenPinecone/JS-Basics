@@ -1,19 +1,21 @@
+const root = document.getElementById(`root`);
 
-  let divs =
-    document.getElementById("containerId").innerHTML +
-    `<div class="boxClass"><p></p></div>`;
+const btn = document.createElement(`button`);
+btn.innerText = `Button`;
+btn.setAttribute(`class`, `btn`);
+root.appendChild(btn);
 
-    console.log(`divs : `,divs);
-    console.log(`innerHTML : `,document.getElementById(`containerId`));
+const container = document.createElement(`div`);
+container.setAttribute(`class`, `container`);
+root.appendChild(container);
 
-  // document.getElementById("containerId").innerHTML = divs;
-  // divs;
-//   function addBoxFunc() {
-// }
-// function addBoxFunc() {
-//   document.getElementById("containerId").innerHTML =
-//     document.getElementById("containerId").innerHTML +
-//     `<div class="boxClass"><p id="count"></p></div>`;
-  // document.getElementById("count").innerText++;
-  // document.getElementById("count").innerText + 1;
+let count = 1;
+
+btn.addEventListener(`click`, add);
+function add() {
+  const box = document.createElement(`div`);
+  box.setAttribute(`class`, `boxClass`);
+  container.appendChild(box);
+  box.innerText = count;
+  count += 1;
 }

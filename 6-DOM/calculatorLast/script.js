@@ -39,6 +39,17 @@ for (let i = 0; i < 19; i++) {
   btn.setAttribute(`class`, `btn`);
   i == 16 ? btn.setAttribute(`class`, `longBtn`) : null;
   btn.innerText = buttons[i];
+  btn.addEventListener(`click`, (e) => {
+    let input = e.target.innerText;
+    console.log(input);
+    if (input == `C`) {
+      displayText.innerText = ``;
+    } else if (input == `+/-`) {
+      displayText.innerText = Number(displayText.innerText) * -1;
+    } else {
+      displayText.innerText += input;
+    }
+  });
   container.appendChild(btn);
   (i >= 0 && i <= 2) || i == 17
     ? (btn.style.backgroundColor = `#6c6b69`) // Dark grey button
@@ -47,9 +58,11 @@ for (let i = 0; i < 19; i++) {
     : (btn.style.backgroundColor = `#838381`); //Light grey button
 }
 
-btn.addEventListener(
-  `click`, () => {
-    const temp = btn.
-  }
-);
-
+startEasyButton.addEventListener("click", () => {
+  startGame(8);
+});
+// btn.addEventListener(
+//   `click`, () => {
+//     const temp = btn.
+//   }
+// );
