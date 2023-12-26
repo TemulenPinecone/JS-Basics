@@ -14,25 +14,25 @@ container.setAttribute(`class`, `container`);
 root.appendChild(container);
 
 const buttons = [
-  `C`,
+  `C`, //0
   `+/-`,
   `%`,
-  `/`,
+  `/`, //3
   `7`,
   `8`,
   `9`,
-  `x`,
+  `x`, //7
   `4`,
   `5`,
   `6`,
-  `-`,
+  `-`, //10
   `1`,
   `2`,
   `3`,
-  `+`,
+  `+`, //14
   `0`,
   `.`,
-  `=`,
+  `=`, //17
 ];
 
 for (let i = 0; i < 19; i++) {
@@ -40,25 +40,17 @@ for (let i = 0; i < 19; i++) {
   btn.setAttribute(`class`, `btn`);
   i == 16 ? btn.setAttribute(`class`, `longBtn`) : null;
   btn.innerText = buttons[i];
-  let c;
   btn.addEventListener(`click`, (e) => {
     let temp = 0;
     let input = e.target.innerText;
-    console.log(input);
-
-    if (input == `C`) {
+    if (i == 0) {
       displayText.innerText = ``;
-      c = false;
-    } else if (input == `+/-`) {
+    } else if (i == 1) {
       displayText.innerText = Number(displayText.innerText) * -1;
-    } else if (input == `/`) {
+    } else if (i == 3) {
       temp = Number(displayText.innerText);
-      c = true;
-      displayText.innerText = "";
-      // console.log("sdasd");
-    } else {
-      displayText.innerText += input;
-    }
+    } else if () {
+    } else displayText.innerText += input;
   });
   container.appendChild(btn);
   (i >= 0 && i <= 2) || i == 17
@@ -67,3 +59,5 @@ for (let i = 0; i < 19; i++) {
     ? (btn.style.backgroundColor = `#f1a23d`) // Orange button
     : (btn.style.backgroundColor = `#838381`); //Light grey button
 }
+
+// document.querySelector(`#`)
