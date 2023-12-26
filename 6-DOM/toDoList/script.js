@@ -21,15 +21,13 @@ headerContainer.appendChild(header);
 const input = document.createElement(`input`);
 input.setAttribute(`class`, `input`);
 input.setAttribute(`id`, `input`);
-// input.defaultValue = `Enter task here...`;
+input.defaultValue = `Enter task here...`;
 headerContainer.appendChild(input);
 
 const addBtn = document.createElement(`button`);
 addBtn.setAttribute(`id`, `addBtn`);
 addBtn.innerText = `Add Task`;
 headerContainer.appendChild(addBtn);
-
-let taskGroupCounter = 1;
 
 addBtn.addEventListener(`click`, addTask);
 function addTask() {
@@ -41,13 +39,12 @@ function addTask() {
   taskGroup.setAttribute(`id`, `taskGroup`);
   toDoContainer.appendChild(taskGroup);
 
-  selected_element.id;
-
   const toDo = document.createElement(`div`);
   const toDoText = document.createElement(`p`);
   toDoText.setAttribute(`class`, `toDoText`);
   taskGroup.appendChild(toDo);
   toDo.setAttribute(`class`, `toDo`);
+  toDo.setAttribute(`id`, `toDo`);
   toDo.appendChild(toDoText);
 
   toDoText.innerText = task;
@@ -63,6 +60,6 @@ function addTask() {
 }
 
 function deleteTask() {
-  const selDelTask = document.getElementById(`toDoContainer`);
-  selDelTask.removeChild(selDelTask.lastChild);
+  const selDelTask = document.getElementById(`toDo`);
+  selDelTask.parentElement.remove();
 }

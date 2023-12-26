@@ -40,6 +40,7 @@ for (let i = 0; i < 19; i++) {
   btn.setAttribute(`class`, `btn`);
   i == 16 ? btn.setAttribute(`class`, `longBtn`) : null;
   btn.innerText = buttons[i];
+  let c;
   btn.addEventListener(`click`, (e) => {
     let temp = 0;
     let input = e.target.innerText;
@@ -47,18 +48,19 @@ for (let i = 0; i < 19; i++) {
 
     if (input == `C`) {
       displayText.innerText = ``;
+      c = false;
     } else if (input == `+/-`) {
       displayText.innerText = Number(displayText.innerText) * -1;
     } else if (input == `/`) {
       temp = Number(displayText.innerText);
-      btn.addEventListener(`onpressup`, (e) => {
-        displayText.innerText = ``;
-      });
+      c = true;
+      displayText.innerText = "";
+      // console.log("sdasd");
     } else {
       displayText.innerText += input;
     }
   });
-  container.appendChild(btn);s
+  container.appendChild(btn);
   (i >= 0 && i <= 2) || i == 17
     ? (btn.style.backgroundColor = `#6c6b69`) // Dark grey button
     : i == 3 || i == 7 || i == 11 || i == 15 || i == 18
