@@ -21,7 +21,7 @@ headerContainer.appendChild(header);
 const input = document.createElement(`input`);
 input.setAttribute(`class`, `input`);
 input.setAttribute(`id`, `input`);
-input.defaultValue = `Enter task here...`;
+input.placeholder = `Enter task here...`;
 headerContainer.appendChild(input);
 
 const addBtn = document.createElement(`button`);
