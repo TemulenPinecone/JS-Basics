@@ -6,27 +6,21 @@ const boxArray = [
   { title: ``, description: ``, status: ``, priority: `` },
 ];
 
-boxArray.forEach(el) => {
-    boxString += `<div ondragstart="drag(event)" class="box" dragabble`
-}
+// boxArray.forEach(el) => {
+//     boxString += `<div ondragstart="drag(event)" class="box" dragabble`
+// }
 
-
-// Todo - 
+// Todo -
 // 1. Delete zuw ustgadag bolgoh
 // 2. Edit button hiih
 // 3. Check box - Done uruu shiljih
 // 4. Drag drop
 // 5. Add card - modal
 
-
-// Calc 
+// Calc
 // 1. Operations
 
 // Colorful
-
-
-
-
 
 // For loop
 // Nested Loop
@@ -35,12 +29,12 @@ boxArray.forEach(el) => {
 // Filter
 // Sort
 
-// If 
+// If
 // Function
 
 // ToDo list
 // Calculator
 
-// Assignment  
+// Assignment
 // Andy teacher
 // Double for loop
