@@ -163,14 +163,14 @@ const bookData = [
 
 // #2 : find 12-18 priced range books
 
-function findPricedBook(inputLowPrice, inputHighPrice) {
-  let filterPricedBook = bookData.filter(
-    (a) => a.price > inputLowPrice && a.price < inputHighPrice
-  );
-  return filterPricedBook;
-}
+// function findPricedBook(inputLowPrice, inputHighPrice) {
+//   let filterPricedBook = bookData.filter(
+//     (a) => a.price > inputLowPrice && a.price < inputHighPrice
+//   );
+//   return filterPricedBook;
+// }
 
-console.log(findPricedBook(12, 15));
+// console.log(findPricedBook(12, 15));
 
 // + push
 // bookData.length =
@@ -208,15 +208,15 @@ console.log(findPricedBook(12, 15));
 
 // #5 - add summary on object by like this `A captivating book by ${book.author}.`
 
-// function addKeyOnObject(inputData) {
-//   let summaryAdded = inputData.map((a) => {
-//     a.summary = a.title + ` by ` + a.author;
-//     return a;
-//   });
-//   return summaryAdded;
-// }
+function addKeyOnObject(inputData) {
+  let summaryAdded = inputData.map((a) => {
+    a.summary = a.title + ` by ` + a.author;
+    return a;
+  });
+  return summaryAdded;
+}
 
-// console.log(addKeyOnObject(bookData));
+console.log(addKeyOnObject(bookData));
 
 // // #6 - Book title iin character length ni 10 aas ihiin awdag function bich, tedgeeriin price
 // //      range iig ni oor function oor garga
