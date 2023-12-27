@@ -144,32 +144,36 @@ const bookData = [
 // #1 - find Expensive book more than 12
 
 // function expensiveMoreThan(comparePrice) {
-//   bookData.filter((b) => {
+//   let filteredPrice = bookData.filter((b) => {
 //     return b.price < comparePrice;
 //   });
+//   return filteredPrice;
 // }
 
-// console.log(expensiveMoreThan(17));
+// console.log(expensiveMoreThan(15));
 
 // #1 : find Expensive book more than 12
 
 // function findExpensiveBook(inputPrice) {
-//   let filterExpensiveBook = bookData.filter((a) => a.price > inputPrice);
+// let filterExpensiveBook = bookData.filter((a) => a.price < inputPrice);
 //   return filterExpensiveBook;
 // }
 
-// console.log(findExpensiveBook(20));
+// console.log(findExpensiveBook(15));
 
 // #2 : find 12-18 priced range books
 
-// function findPricedBook(inputLowPrice, inputHighPrice) {
-//   let filterPricedBook = bookData.filter(
-//     (a) => a.price > inputLowPrice && a.price < inputHighPrice
-//   );
-//   return filterPricedBook;
-// }
+function findPricedBook(inputLowPrice, inputHighPrice) {
+  let filterPricedBook = bookData.filter(
+    (a) => a.price > inputLowPrice && a.price < inputHighPrice
+  );
+  return filterPricedBook;
+}
 
-// console.log(findPricedBook(12, 18));
+console.log(findPricedBook(12, 15));
+
+// + push
+// bookData.length =
 
 // #3 : sort books by rating
 
@@ -204,34 +208,33 @@ const bookData = [
 
 // #5 - add summary on object by like this `A captivating book by ${book.author}.`
 
-function addKeyOnObject(inputData) {
-  let summaryAdded = inputData.map((a) => {
-    a.summary = a.title + ` by ` + a.author;
-    return a;
-  });
-  return summaryAdded;
-}
+// function addKeyOnObject(inputData) {
+//   let summaryAdded = inputData.map((a) => {
+//     a.summary = a.title + ` by ` + a.author;
+//     return a;
+//   });
+//   return summaryAdded;
+// }
 
-console.log(addKeyOnObject(bookData));
+// console.log(addKeyOnObject(bookData));
 
-// #6 - Book title iin character length ni 10 aas ihiin awdag function bich, tedgeeriin price
-//      range iig ni oor function oor garga
+// // #6 - Book title iin character length ni 10 aas ihiin awdag function bich, tedgeeriin price
+// //      range iig ni oor function oor garga
 
-function findTextLength(10) {
-  let filteredTextLegth = bookData
-  .filter((a) => a.title.length > 10 && a.price
-  .filter)
-}
+// function findTextLength(10) {
+//   let filteredTextLegth = bookData
+//   .filter((a) => a.title.length > 10 && a.price
+//   .filter)
+// }
 
-function topPerformersReport(dat, perf) {
-  let topPerformers = dat
-    .filter((a) => a.performanceRating >= perf)
-    .map(({ name, performanceRating }) => ({ name, performanceRating }));
-  return topPerformers;
-}
+// function topPerformersReport(dat, perf) {
+//   let topPerformers = dat
+//     .filter((a) => a.performanceRating >= perf)
+//     .map(({ name, performanceRating }) => ({ name, performanceRating }));
+//   return topPerformers;
+// }
 
-console.log(topPerformersReport(employees, 4.8));
-
+// console.log(topPerformersReport(employees, 4.8));
 
 // function findPricedBook(inputLowPrice, inputHighPrice) {
 //   let filterPricedBook = bookData.filter(

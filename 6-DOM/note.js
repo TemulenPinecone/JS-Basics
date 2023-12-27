@@ -23,3 +23,24 @@ boxArray.forEach(el) => {
 // 1. Operations
 
 // Colorful
+
+
+
+
+
+// For loop
+// Nested Loop
+
+// Map
+// Filter
+// Sort
+
+// If 
+// Function
+
+// ToDo list
+// Calculator
+
+// Assignment  
+// Andy teacher
+// Double for loop

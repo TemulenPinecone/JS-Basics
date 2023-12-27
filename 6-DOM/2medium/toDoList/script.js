@@ -40,9 +40,11 @@ let counter = 0;
 
 // ADD TASK FUNCTION
 addBtn.addEventListener(`click`, addTask);
+
 function addTask() {
   inputArr[inputArr.length] = input.value;
   counter = inputArr.length - 1;
+  console.log(`counter : `, counter);
   // console.log({ counter });
 
   // TASK GROUP DIV
@@ -89,5 +91,8 @@ function addTask() {
     editToDo.setAttribute(`id`, `editToDo`);
     toDo.appendChild(editToDo);
     editToDo.defaultValue = inputArr[counter];
+    console.log(`inputArr[counter] : `, inputArr[counter]);
+    console.log(`inputArr : `, inputArr);
+    console.log(`counter`, counter);
   }
 }
