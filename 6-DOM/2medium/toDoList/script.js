@@ -17,6 +17,9 @@ header.innerText = `To-Do List`;
 headerContainer.appendChild(header);
 
 // HEADER CONTAINER - INPUT TAG
+let inputArr = [];
+let counter = 1;
+
 const input = document.createElement(`input`);
 input.setAttribute(`class`, `input`);
 input.setAttribute(`id`, `input`);
@@ -35,46 +38,44 @@ toDoContainer.setAttribute(`class`, `toDoContainer`);
 toDoContainer.setAttribute(`id`, `toDoContainer`);
 mainContainer.appendChild(toDoContainer);
 
-let inputArr = [];
-let counter = 0;
+// taskGroup, dltBtn ID numberator
+let x = 1;
 
 // ADD TASK FUNCTION
 addBtn.addEventListener(`click`, addTask);
 
 function addTask() {
-  inputArr[inputArr.length] = input.value;
-  counter = inputArr.length - 1;
-  console.log(`counter : `, counter);
-  // console.log({ counter });
-
   // TASK GROUP DIV
   const taskGroup = document.createElement(`div`);
   taskGroup.setAttribute(`class`, `taskGroup`);
-  taskGroup.setAttribute(`id`, `taskGroup`);
+  taskGroup.setAttribute(`id`, `taskGroup${x}`);
   toDoContainer.appendChild(taskGroup);
 
   // TODO DIV, TODOTEXT P
   const toDo = document.createElement(`div`);
+  const toDoP = document.createElement(`p`);
   toDo.setAttribute(`class`, `toDo`);
   toDo.setAttribute(`id`, `toDo`);
+  toDoP.setAttribute(`id`, `toDoP${x}`);
   taskGroup.appendChild(toDo);
+  toDo.appendChild(toDoP);
 
-  toDo.innerText = inputArr[inputArr.length - 1];
+  // toDoP.innerText = inputArr[inputArr.length - 1];
+  toDoP.innerText = input.value;
+  inputArr[inputArr.length] = toDoP.innerText;
+  // console.log(`inputArr : `, inputArr);
+  counter = inputArr.length - 1;
+  // console.log(`counter : `, counter);
+
+  // let temp = input.value;
+  // inputArr.push = temp;
 
   // DELETE BUTTON
   const dltBtn = document.createElement(`button`);
   dltBtn.setAttribute(`class`, `dltBtn`);
-  dltBtn.setAttribute(`id`, `dltBtn`);
+  dltBtn.setAttribute(`id`, `dltBtn${x}`);
   dltBtn.innerText = `Delete`;
   taskGroup.appendChild(dltBtn);
-
-  dltBtn.addEventListener(`click`, deleteTask);
-
-  // DELETE FUNCTION
-  function deleteTask() {
-    document.getElementById(`taskGroup`);
-    taskGroup.remove();
-  }
 
   // EDIT BUTTON
   const editBtn = document.createElement(`button`);
@@ -82,17 +83,29 @@ function addTask() {
   editBtn.innerText = `Edit`;
   taskGroup.appendChild(editBtn);
 
+  // let dlt = document.getElementById(`taskGroup${x}`);
+  // dltBtn.addEventListener(`click`, removeAttribute(dlt));
+  // dltBtn.addEventListener(`click`, removeAttribute(dlt));
+  // taskGroup.removeAttribute
+
   editBtn.addEventListener(`click`, editTask);
 
-  // EDIT FUNCTION
-  function editTask() {
-    const editToDo = document.createElement(`input`);
-    editToDo.setAttribute(`class`, `editToDo`);
-    editToDo.setAttribute(`id`, `editToDo`);
-    toDo.appendChild(editToDo);
-    editToDo.defaultValue = inputArr[counter];
-    console.log(`inputArr[counter] : `, inputArr[counter]);
-    console.log(`inputArr : `, inputArr);
-    console.log(`counter`, counter);
-  }
+  x++;
+}
+
+// DELETE FUNCTION
+function deleteTask() {
+  removeAttribute(dlt);
+}
+
+// EDIT FUNCTION
+function editTask() {
+  const editToDo = document.createElement(`input`);
+  editToDo.setAttribute(`class`, `editToDo`);
+  editToDo.setAttribute(`id`, `editToDo`);
+  toDo.appendChild(editToDo);
+  editToDo.defaultValue = inputArr[counter];
+  console.log(`inputArr[counter] : `, inputArr[counter]);
+  console.log(`inputArr : `, inputArr);
+  console.log(`counter`, counter);
 }
