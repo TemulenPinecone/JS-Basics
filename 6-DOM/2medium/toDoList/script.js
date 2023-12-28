@@ -1,5 +1,8 @@
 const root = document.getElementById(`root`);
 
+// const body = document.getElementsByName("body")
+
+
 // MAIN CONTAINER
 const mainContainer = document.createElement(`div`);
 mainContainer.setAttribute(`class`, `mainContainer`);
@@ -94,9 +97,14 @@ function addTask() {
 }
 
 // DELETE FUNCTION
-function deleteTask() {
-  removeAttribute(dlt);
-}
+// function deleteTask() {
+//   removeAttribute(dlt);
+// }
+const deleteDiv = () => {
+  document.getElementById(`taskGroup ${x}`);
+  toDoContainer.removeChild(taskGroup);
+  console.log(toDoContainer);
+};
 
 // EDIT FUNCTION
 function editTask() {
