@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url("https://cdn.wallpapersafari.com/53/47/LoENic.jpg");
+  background-repeat: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 1000px;
+  padding: 0 20px;
+  padding-top: 20px;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 120px;
+}
+
+.boards {
+  display: flex;
+  gap: 20px;
+}
+
+.board {
+  border-radius: 10px;
+  background-color: #ebecf0;
+  width: 24%;
+  height: auto;
+}
+
+.addBtn {
+  cursor: pointer;
+  padding: 10px;
+}
