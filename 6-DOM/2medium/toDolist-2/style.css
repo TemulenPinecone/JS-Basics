@@ -33,7 +33,7 @@ body {
   border-radius: 10px;
   background-color: #ebecf0;
   width: 24%;
-  height: auto;
+  /* height: auto; */
 }
 
 .addBtn {
@@ -60,4 +60,14 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+}
+
+.cardDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  border: dotted 1px grey;
+  border-radius: 10px;
 }
