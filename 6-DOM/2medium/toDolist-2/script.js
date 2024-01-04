@@ -241,14 +241,15 @@ function createCard(x) {
   console.log(x);
   const cardDiv = document.createElement(`div`);
   const doneSign = document.createElement(`div`);
-  const doneSignI = document.createElement(`i`);
-  doneSignI.innerText = `^^`;
+  doneSign.innerHTML = `<i class="fa-sharp fa-regular fa-circle-check"></i>`;
   const detail = document.createElement(`div`);
   const detailH4 = document.createElement(`h4`);
   const detailP = document.createElement(`p`);
   const detailDiv = document.createElement(`div`);
   const actions = document.createElement(`div`);
-  actions.innerText = `Symbol`;
+
+  actions.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
+  actions.innerHTML = `<i class="fa-regular fa-pen-to-square"></i>`;
 
   cardDiv.setAttribute(`class`, `cardDiv`);
   doneSign.setAttribute(`class`, `doneSign`);
