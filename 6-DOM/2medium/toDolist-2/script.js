@@ -241,7 +241,8 @@ function createCard(x) {
   console.log(x);
   const cardDiv = document.createElement(`div`);
   const doneSign = document.createElement(`div`);
-  doneSign.innerHTML = `<i class="fa-sharp fa-regular fa-circle-check"></i>`;
+  const doneSignI = document.createElement(`div`);
+  doneSignI.innerHTML = `<i class="fa-sharp fa-regular fa-circle-check"></i>`;
   const detail = document.createElement(`div`);
   const detailH4 = document.createElement(`h4`);
   const detailP = document.createElement(`p`);
@@ -290,3 +291,4 @@ function createCard(x) {
 // });
 
 // input/typecheckbox
+// node package manager - npm
