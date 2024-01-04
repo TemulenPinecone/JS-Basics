@@ -1,4 +1,4 @@
-let todos = [
+const todos = [
   {
     title: `JavaScript`,
     description: `Learn Javascript master`,
@@ -76,10 +76,13 @@ function drawBoard() {
   let x = 0;
   let headerInnerTxt = [`To do`, `In progress`, `Stuck`, `Done`];
   let addBtnArr = [`ToDo`, `InProgress`, `Stuck`, `Done`];
+  let boardName = [`ToDo`, `InProgress`, `Stuck`, `Done`];
+  let cardsName = [`ToDo`, `InProgress`, `Stuck`, `Done`];
 
   for (let i = 0; i < 4; i++) {
-    let board = document.createElement(`div`);
+    var board = document.createElement(`div`);
     board.setAttribute(`class`, `board`);
+    board.setAttribute(`id`, `${boardName[x]}Board`);
     boards.appendChild(board);
 
     let header = document.createElement(`div`);
@@ -96,14 +99,14 @@ function drawBoard() {
     counter.innerText = `1`;
     header.appendChild(counter);
 
-    let cards = document.createElement(`div`);
+    var cards = document.createElement(`div`);
     cards.setAttribute(`class`, `cards`);
+    cards.setAttribute(`id`, `${cardsName[x]}Cards`);
     board.appendChild(cards);
 
     var addBtn = document.createElement(`div`);
     addBtn.setAttribute(`class`, `addBtn`);
     addBtn.setAttribute(`id`, `addBtn${addBtnArr[x]}`);
-    // addBtn.setAttribute(`id`, `addBtn`);
     addBtn.innerText = `+ Add card`;
     board.appendChild(addBtn);
     x++;
@@ -166,6 +169,7 @@ submitBtn.setAttribute(`class`, `submitBtn`);
 submitBtn.innerText = `Submit`;
 modal.appendChild(submitBtn);
 
+// ADD CARD BUTTON SHOW  OR NOT SHOW
 let addBtnToDo = document.getElementById(`addBtnToDo`);
 let addBtnInProgress = document.getElementById(`addBtnInProgress`);
 let addBtnStuck = document.getElementById(`addBtnStuck`);
@@ -189,3 +193,53 @@ window.onclick = function (event) {
     modalCont.style.display = "none";
   }
 };
+
+function createCard(x) {
+  console.log(x);
+  const cardDiv = document.createElement(`div`);
+  const doneSign = document.createElement(`div`);
+  const doneSignI = document.createElement(`i`);
+  doneSignI.innerText = `i = fas fa-check`;
+  const detail = document.createElement(`div`);
+  const detailH4 = document.createElement(`h4`);
+  const detailP = document.createElement(`p`);
+  const detailDiv = document.createElement(`div`);
+
+  const actions = document.createElement(`div`);
+
+  cardDiv.setAttribute(`class`, `cardDiv`);
+  doneSign.setAttribute(`class`, `doneSign`);
+  detail.setAttribute(`class`, `detail`);
+  actions.setAttribute(`class`, `actions`);
+  detailDiv.setAttribute(`class`, `priority`);
+
+  detailH4.innerText = x.title;
+  detailP.innerText = x.description;
+  detailDiv.innerText = x.priority;
+
+  // cards.appendChild(cardDiv);
+  cardDiv.appendChild(doneSign);
+  cardDiv.appendChild(detail);
+  cardDiv.appendChild(actions);
+  detail.appendChild(detailH4);
+  detail.appendChild(detailP);
+  detail.appendChild(detailDiv);
+
+  return cardDiv;
+}
+
+todos.map((a) => {
+  if (a.status == `To do`) {
+    cards = document.getElementById(`ToDoCards`);
+    cards.appendChild(createCard(a));
+  } else if (a.status == `In progress`) {
+    cards = document.getElementById(`InProgressCards`);
+    cards.appendChild(createCard(a));
+  } else if (a.status == `Stuck`) {
+    cards = document.getElementById(`StuckCards`);
+    cards.appendChild(createCard(a));
+  } else if (a.status == `Done`) {
+    cards = document.getElementById(`DoneCards`);
+    cards.appendChild(createCard(a));
+  }
+});
