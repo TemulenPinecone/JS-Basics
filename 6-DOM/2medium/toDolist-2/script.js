@@ -1,130 +1,101 @@
-// const todos = [
-//   {
-//     title: `JavaScript`,
-//     description: `Learn Javascript master`,
-//     status: `To do`,
-//     priority: `Low`,
-//   },
-//   {
-//     title: `TypeScript`,
-//     description: `Learn Typescript master`,
-//     status: `Done`,
-//     priority: `Low`,
-//   },
-//   {
-//     title: `Java`,
-//     description: `Learn Java master`,
-//     status: `Stuck`,
-//     priority: `Medium`,
-//   },
-//   {
-//     title: `Python`,
-//     description: `Learn Python master`,
-//     status: `In progress`,
-//     priority: `Medium`,
-//   },
-//   {
-//     title: `MySQL`,
-//     description: `Learn MySQL master`,
-//     status: `In progress`,
-//     priority: `High`,
-//   },
-//   {
-//     title: `HTML CSS master level`,
-//     description: `Learn HTML CSS master level`,
-//     status: `doIn progressne`,
-//     priority: `Medium`,
-//   },
-//   {
-//     title: `React`,
-//     description: `Learn React master`,
-//     status: `In progress`,
-//     priority: `Medium`,
-//   },
-//   {
-//     title: `English language`,
-//     description: `Learn English language master level`,
-//     status: `To do`,
-//     priority: `High`,
-//   },
-//   {
-//     title: `VueJS`,
-//     description: `Learn VueJS`,
-//     status: `In progress`,
-//     priority: `High`,
-//   },
-//   {
-//     title: `Git`,
-//     description: `Learn Git master`,
-//     status: `In progress`,
-//     priority: `Medium`,
-//   },
-// ];
-const todos = [];
+const todos = [
+  {
+    title: `JavaScript`,
+    description: `Learn Javascript master`,
+    status: `To do`,
+    priority: `Low`,
+  },
+  {
+    title: `TypeScript`,
+    description: `Learn Typescript master`,
+    status: `Done`,
+    priority: `Low`,
+  },
+  {
+    title: `Java`,
+    description: `Learn Java master`,
+    status: `Stuck`,
+    priority: `Medium`,
+  },
+  {
+    title: `Python`,
+    description: `Learn Python master`,
+    status: `In progress`,
+    priority: `Medium`,
+  },
+  {
+    title: `MySQL`,
+    description: `Learn MySQL master`,
+    status: `In progress`,
+    priority: `High`,
+  },
+  {
+    title: `HTML CSS master level`,
+    description: `Learn HTML CSS master level`,
+    status: `doIn progressne`,
+    priority: `Medium`,
+  },
+  {
+    title: `React`,
+    description: `Learn React master`,
+    status: `In progress`,
+    priority: `Medium`,
+  },
+  {
+    title: `English language`,
+    description: `Learn English language master level`,
+    status: `To do`,
+    priority: `High`,
+  },
+  {
+    title: `VueJS`,
+    description: `Learn VueJS`,
+    status: `In progress`,
+    priority: `High`,
+  },
+  {
+    title: `Git`,
+    description: `Learn Git master`,
+    status: `In progress`,
+    priority: `Medium`,
+  },
+];
+// const todos = [];
 
-const root = document.getElementById(`root`);
+// CREATE TAG
+function createTag(tagName, tagClass, tagId) {
+  const tag = document.createElement(`${tagName}`);
+  if (tagClass != "" && tagClass != undefined) {
+    tag.setAttribute("class", `${tagClass}`);
+  }
+  if (tagId != "" && tagId != undefined) {
+    tag.setAttribute("id", `${tagId}`);
+  }
+  return tag;
+}
+// const header = createTag(`attribute`, `className`, `idName`);
 
+// CONTAINER
 const container = document.createElement(`div`);
 container.setAttribute(`class`, `container`);
 root.appendChild(container);
 
+// BOARDS CONTAINER
 const boards = document.createElement(`div`);
 boards.setAttribute(`class`, `boards`);
 container.appendChild(boards);
-
-// DRAW BOARD FUNCTION
-function drawBoard() {
-  let x = 0;
-  let headerInnerTxt = [`To do`, `In progress`, `Stuck`, `Done`];
-  let addBtnArr = [`ToDo`, `InProgress`, `Stuck`, `Done`];
-  let boardName = [`ToDo`, `InProgress`, `Stuck`, `Done`];
-  let cardsName = [`ToDo`, `InProgress`, `Stuck`, `Done`];
-
-  for (let i = 0; i < 4; i++) {
-    var board = document.createElement(`div`);
-    board.setAttribute(`class`, `board`);
-    board.setAttribute(`id`, `${boardName[x]}Board`);
-    boards.appendChild(board);
-
-    let header = document.createElement(`div`);
-    header.setAttribute(`class`, `header`);
-    board.appendChild(header);
-
-    let headerTitle = document.createElement(`div`);
-    headerTitle.setAttribute(`class`, `headerTitle`);
-    header.appendChild(headerTitle);
-    headerTitle.innerText = headerInnerTxt[x];
-
-    let counter = document.createElement(`div`);
-    counter.setAttribute(`class`, `counter`);
-    counter.innerText = `1`;
-    header.appendChild(counter);
-
-    var cards = document.createElement(`div`);
-    cards.setAttribute(`class`, `cards`);
-    cards.setAttribute(`id`, `${cardsName[x]}Cards`);
-    board.appendChild(cards);
-
-    var addBtn = document.createElement(`div`);
-    addBtn.setAttribute(`class`, `addBtn`);
-    addBtn.setAttribute(`id`, `addBtn${addBtnArr[x]}`);
-    addBtn.innerText = "+" + ` ` + "Add card";
-    board.appendChild(addBtn);
-    x++;
-  }
-}
-drawBoard();
-// render();
 
 // MODAL CONTAINER
 let modalCont = document.createElement(`div`);
 modalCont.setAttribute(`class`, `modalCont`);
 root.appendChild(modalCont);
 
-// MODAL
+// CREATE MODAL
 let modal = document.createElement(`div`);
 modal.setAttribute(`class`, `modal`);
 modalCont.appendChild(modal);
+
+// const header = createTag(`attribute`, `className`, `idName`);
 
 let modalTitle = document.createElement(`p`);
 modalTitle.innerText = `Title`;
@@ -175,8 +146,52 @@ submitBtn.setAttribute(`class`, `submitBtn`);
 submitBtn.innerText = `Submit`;
 modal.appendChild(submitBtn);
 
+// CREATE BOARD FUNCTION
+function createBoard() {
+  let x = 0;
+  let headerInnerTxt = [`To do`, `In progress`, `Stuck`, `Done`];
+  let addBtnArr = [`ToDo`, `InProgress`, `Stuck`, `Done`];
+  let boardName = [`ToDo`, `InProgress`, `Stuck`, `Done`];
+  let cardsName = [`ToDo`, `InProgress`, `Stuck`, `Done`];
+
+  for (let i = 0; i < 4; i++) {
+    var board = document.createElement(`div`);
+    board.setAttribute(`class`, `board`);
+    board.setAttribute(`id`, `${boardName[x]}Board`);
+    boards.appendChild(board);
+
+    let header = document.createElement(`div`);
+    header.setAttribute(`class`, `header`);
+    board.appendChild(header);
+
+    let headerTitle = document.createElement(`div`);
+    headerTitle.setAttribute(`class`, `headerTitle`);
+    header.appendChild(headerTitle);
+    headerTitle.innerText = headerInnerTxt[x];
+
+    let counter = document.createElement(`div`);
+    counter.setAttribute(`class`, `counter`);
+    counter.innerText = `1`;
+    header.appendChild(counter);
+
+    var cards = document.createElement(`div`);
+    cards.setAttribute(`class`, `cards`);
+    cards.setAttribute(`id`, `${cardsName[x]}Cards`);
+    board.appendChild(cards);
+
+    var addBtn = document.createElement(`div`);
+    addBtn.setAttribute(`class`, `addBtn`);
+    addBtn.setAttribute(`id`, `addBtn${addBtnArr[x]}`);
+    addBtn.innerText = "+" + ` ` + "Add card";
+    board.appendChild(addBtn);
+    x++;
+  }
+}
+createBoard();
+render();
+
+// CREATE CARD EACH
 function createCard(x) {
-  console.log(x);
   const cardDiv = document.createElement(`div`);
   const doneSign = document.createElement(`div`);
   const doneSignI = document.createElement(`div`);
@@ -206,7 +221,6 @@ function createCard(x) {
   detailP.innerText = x.description;
   detailDiv.innerText = x.priority;
 
-  // cards.appendChild(cardDiv);
   cardDiv.appendChild(doneSign);
   cardDiv.appendChild(detail);
   cardDiv.appendChild(actions);
@@ -216,8 +230,6 @@ function createCard(x) {
   detail.appendChild(detailDiv);
   actions.appendChild(actionsSym1);
   actions.appendChild(actionsSym2);
-
-  doneSignI.addEventListener(`click`, console.log(`d`));
 
   return cardDiv;
 }
@@ -286,13 +298,6 @@ window.onclick = function (event) {
     modalCont.style.display = "none";
   }
 };
-
-let checkBox = document.querySelector(`#doneSignI`);
-
-checkBox.onclick = function checkFunc() {
-  console.log(`OKOKK`);
-};
-// checkBox.addEventListener(`click`, console.log(`ok`));
 
 // input/typecheckbox
 // node package manager - npm
