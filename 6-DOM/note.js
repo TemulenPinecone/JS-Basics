@@ -38,3 +38,22 @@ const boxArray = [
 // Assignment
 // Andy teacher
 // Double for loop
+
+// https://learn-js.org/
+
+
+1. check darahad 
+    1 - check darahad Done list uruu shiljih
+2. X darahad delete
+3. Edit darahad Edit
+
+// - Kanban board загвартай байна
+// - Task нэмэх
+// - Task харах
+- Task дуусгах
+- Task устгах
+- Task засах
+- Task ийг Drag and Drop API ашиглан зөөх
+- Жагсаалт болгонд хэдэн ширхэг task байгааг харуулах
+- Жагсаалтанд priority өндөр байх тусмаа эхэнд гарч ирнэ
+- Input Validation (Task нэмэх болон засах үед)

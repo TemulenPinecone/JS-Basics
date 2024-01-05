@@ -1,65 +1,66 @@
-const todos = [
-  {
-    title: `JavaScript`,
-    description: `Learn Javascript master`,
-    status: `To do`,
-    priority: `Low`,
-  },
-  {
-    title: `TypeScript`,
-    description: `Learn Typescript master`,
-    status: `Done`,
-    priority: `Low`,
-  },
-  {
-    title: `Java`,
-    description: `Learn Java master`,
-    status: `Stuck`,
-    priority: `Medium`,
-  },
-  {
-    title: `Python`,
-    description: `Learn Python master`,
-    status: `In progress`,
-    priority: `Medium`,
-  },
-  {
-    title: `MySQL`,
-    description: `Learn MySQL master`,
-    status: `In progress`,
-    priority: `High`,
-  },
-  {
-    title: `HTML CSS master level`,
-    description: `Learn HTML CSS master level`,
-    status: `doIn progressne`,
-    priority: `Medium`,
-  },
-  {
-    title: `React`,
-    description: `Learn React master`,
-    status: `In progress`,
-    priority: `Medium`,
-  },
-  {
-    title: `English language`,
-    description: `Learn English language master level`,
-    status: `To do`,
-    priority: `High`,
-  },
-  {
-    title: `VueJS`,
-    description: `Learn VueJS`,
-    status: `In progress`,
-    priority: `High`,
-  },
-  {
-    title: `Git`,
-    description: `Learn Git master`,
-    status: `In progress`,
-    priority: `Medium`,
-  },
-];
+// const todos = [
+//   {
+//     title: `JavaScript`,
+//     description: `Learn Javascript master`,
+//     status: `To do`,
+//     priority: `Low`,
+//   },
+//   {
+//     title: `TypeScript`,
+//     description: `Learn Typescript master`,
+//     status: `Done`,
+//     priority: `Low`,
+//   },
+//   {
+//     title: `Java`,
+//     description: `Learn Java master`,
+//     status: `Stuck`,
+//     priority: `Medium`,
+//   },
+//   {
+//     title: `Python`,
+//     description: `Learn Python master`,
+//     status: `In progress`,
+//     priority: `Medium`,
+//   },
+//   {
+//     title: `MySQL`,
+//     description: `Learn MySQL master`,
+//     status: `In progress`,
+//     priority: `High`,
+//   },
+//   {
+//     title: `HTML CSS master level`,
+//     description: `Learn HTML CSS master level`,
+//     status: `doIn progressne`,
+//     priority: `Medium`,
+//   },
+//   {
+//     title: `React`,
+//     description: `Learn React master`,
+//     status: `In progress`,
+//     priority: `Medium`,
+//   },
+//   {
+//     title: `English language`,
+//     description: `Learn English language master level`,
+//     status: `To do`,
+//     priority: `High`,
+//   },
+//   {
+//     title: `VueJS`,
+//     description: `Learn VueJS`,
+//     status: `In progress`,
+//     priority: `High`,
+//   },
+//   {
+//     title: `Git`,
+//     description: `Learn Git master`,
+//     status: `In progress`,
+//     priority: `Medium`,
+//   },
+// ];
+const todos = [];
 
 const root = document.getElementById(`root`);
 
@@ -107,13 +108,13 @@ function drawBoard() {
     var addBtn = document.createElement(`div`);
     addBtn.setAttribute(`class`, `addBtn`);
     addBtn.setAttribute(`id`, `addBtn${addBtnArr[x]}`);
-    addBtn.innerText = `+ Add card`;
+    addBtn.innerText = "+" + ` ` + "Add card";
     board.appendChild(addBtn);
     x++;
   }
 }
 drawBoard();
-render();
+// render();
 
 // MODAL CONTAINER
 let modalCont = document.createElement(`div`);
@@ -174,25 +175,74 @@ submitBtn.setAttribute(`class`, `submitBtn`);
 submitBtn.innerText = `Submit`;
 modal.appendChild(submitBtn);
 
+function createCard(x) {
+  console.log(x);
+  const cardDiv = document.createElement(`div`);
+  const doneSign = document.createElement(`div`);
+  const doneSignI = document.createElement(`div`);
+  const detail = document.createElement(`div`);
+  const detailH4 = document.createElement(`h4`);
+  const detailP = document.createElement(`p`);
+  const detailDiv = document.createElement(`div`);
+  const actions = document.createElement(`div`);
+  const actionsSym1 = document.createElement(`div`);
+  const actionsSym2 = document.createElement(`div`);
+
+  doneSignI.innerHTML = `<i class="fa-sharp fa-regular fa-circle-check"></i>`;
+  actionsSym1.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
+  actionsSym2.innerHTML = `<i class="fa-regular fa-pen-to-square"></i>`;
+
+  cardDiv.setAttribute(`class`, `cardDiv`);
+  doneSign.setAttribute(`class`, `doneSign`);
+  doneSignI.setAttribute(`class`, `doneSignI`);
+  doneSignI.setAttribute(`id`, `doneSignI`);
+  detail.setAttribute(`class`, `detail`);
+  actions.setAttribute(`class`, `actions`);
+  detailDiv.setAttribute(`class`, `priority`);
+  actionsSym1.setAttribute(`class`, `actionsSym1`);
+  actionsSym2.setAttribute(`class`, `actionsSym2`);
+
+  detailH4.innerText = x.title;
+  detailP.innerText = x.description;
+  detailDiv.innerText = x.priority;
+
+  // cards.appendChild(cardDiv);
+  cardDiv.appendChild(doneSign);
+  cardDiv.appendChild(detail);
+  cardDiv.appendChild(actions);
+  doneSign.appendChild(doneSignI);
+  detail.appendChild(detailH4);
+  detail.appendChild(detailP);
+  detail.appendChild(detailDiv);
+  actions.appendChild(actionsSym1);
+  actions.appendChild(actionsSym2);
+
+  doneSignI.addEventListener(`click`, console.log(`d`));
+
+  return cardDiv;
+}
 function render() {
-  const cards1 = document.getElementById(`ToDoCards`);
-  const cards2 = document.getElementById(`InProgressCards`);
-  const cards3 = document.getElementById(`StuckCards`);
-  const cards4 = document.getElementById(`DoneCards`);
-  cards1.innerHTML = "";
-  cards2.innerHTML = "";
-  cards3.innerHTML = "";
-  cards4.innerHTML = "";
+  const cardsToDo = document.getElementById(`ToDoCards`);
+  const cardsInProg = document.getElementById(`InProgressCards`);
+  const cardsStuck = document.getElementById(`StuckCards`);
+  const cardsDone = document.getElementById(`DoneCards`);
+  cardsToDo.innerHTML = "";
+  cardsInProg.innerHTML = "";
+  cardsStuck.innerHTML = "";
+  cardsDone.innerHTML = "";
 
   todos.map((a) => {
     if (a.status == `To do`) {
-      cards1.appendChild(createCard(a));
+      cardsToDo.appendChild(createCard(a));
+      // debugger;
     } else if (a.status == `In progress`) {
-      cards2.appendChild(createCard(a));
+      cardsInProg.appendChild(createCard(a));
+      // debugger;
     } else if (a.status == `Stuck`) {
-      cards3.appendChild(createCard(a));
+      cardsStuck.appendChild(createCard(a));
+      // debugger;
     } else if (a.status == `Done`) {
-      cards4.appendChild(createCard(a));
+      cardsDone.appendChild(createCard(a));
     }
   });
 }
@@ -208,7 +258,7 @@ submitBtn.onclick = function modalValue() {
     status: modalStatus,
     priority: modalPriority,
   });
-  console.log(todos);
+  // console.log(todos);
   render();
 };
 
@@ -237,58 +287,12 @@ window.onclick = function (event) {
   }
 };
 
-function createCard(x) {
-  console.log(x);
-  const cardDiv = document.createElement(`div`);
-  const doneSign = document.createElement(`div`);
-  const doneSignI = document.createElement(`div`);
-  doneSignI.innerHTML = `<i class="fa-sharp fa-regular fa-circle-check"></i>`;
-  const detail = document.createElement(`div`);
-  const detailH4 = document.createElement(`h4`);
-  const detailP = document.createElement(`p`);
-  const detailDiv = document.createElement(`div`);
-  const actions = document.createElement(`div`);
+let checkBox = document.querySelector(`#doneSignI`);
 
-  actions.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
-  actions.innerHTML = `<i class="fa-regular fa-pen-to-square"></i>`;
-
-  cardDiv.setAttribute(`class`, `cardDiv`);
-  doneSign.setAttribute(`class`, `doneSign`);
-  detail.setAttribute(`class`, `detail`);
-  actions.setAttribute(`class`, `actions`);
-  detailDiv.setAttribute(`class`, `priority`);
-
-  detailH4.innerText = x.title;
-  detailP.innerText = x.description;
-  detailDiv.innerText = x.priority;
-
-  // cards.appendChild(cardDiv);
-  cardDiv.appendChild(doneSign);
-  cardDiv.appendChild(detail);
-  cardDiv.appendChild(actions);
-  doneSign.appendChild(doneSignI);
-  detail.appendChild(detailH4);
-  detail.appendChild(detailP);
-  detail.appendChild(detailDiv);
-
-  return cardDiv;
-}
-
-// todos.map((a) => {
-//   if (a.status == `To do`) {
-//     cards = document.getElementById(`ToDoCards`);
-//     cards.appendChild(createCard(a));
-//   } else if (a.status == `In progress`) {
-//     cards = document.getElementById(`InProgressCards`);
-//     cards.appendChild(createCard(a));
-//   } else if (a.status == `Stuck`) {
-//     cards = document.getElementById(`StuckCards`);
-//     cards.appendChild(createCard(a));
-//   } else if (a.status == `Done`) {
-//     cards = document.getElementById(`DoneCards`);
-//     cards.appendChild(createCard(a));
-//   }
-// });
+checkBox.onclick = function checkFunc() {
+  console.log(`OKOKK`);
+};
+// checkBox.addEventListener(`click`, console.log(`ok`));
 
 // input/typecheckbox
 // node package manager - npm
