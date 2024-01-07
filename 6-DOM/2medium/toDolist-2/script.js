@@ -198,7 +198,7 @@ function createCard(x) {
   const detail = document.createElement(`div`);
   const detailH4 = document.createElement(`h4`);
   const detailP = document.createElement(`p`);
-  const detailDiv = document.createElement(`div`);
+  const priority = document.createElement(`div`);
   const actions = document.createElement(`div`);
   const actionsSym1 = document.createElement(`div`);
   const actionsSym2 = document.createElement(`div`);
@@ -213,13 +213,13 @@ function createCard(x) {
   doneSignI.setAttribute(`id`, `doneSignI`);
   detail.setAttribute(`class`, `detail`);
   actions.setAttribute(`class`, `actions`);
-  detailDiv.setAttribute(`class`, `priority`);
+  priority.setAttribute(`class`, `priority`);
   actionsSym1.setAttribute(`class`, `actionsSym1`);
   actionsSym2.setAttribute(`class`, `actionsSym2`);
 
   detailH4.innerText = x.title;
   detailP.innerText = x.description;
-  detailDiv.innerText = x.priority;
+  priority.innerText = x.priority;
 
   cardDiv.appendChild(doneSign);
   cardDiv.appendChild(detail);
@@ -227,7 +227,7 @@ function createCard(x) {
   doneSign.appendChild(doneSignI);
   detail.appendChild(detailH4);
   detail.appendChild(detailP);
-  detail.appendChild(detailDiv);
+  detail.appendChild(priority);
   actions.appendChild(actionsSym1);
   actions.appendChild(actionsSym2);
 
